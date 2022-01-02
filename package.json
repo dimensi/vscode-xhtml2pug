@@ -2,7 +2,7 @@
   "name": "vscode-xhtml2pug",
   "displayName": "vscode-xhtml2pug",
   "description": "Convert HTML, Vue, Angular to PUG",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icon": "xhtml2pug-logo.png",
   "publisher": "dimensi",
   "license": "MIT",
