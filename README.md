@@ -2,65 +2,49 @@
 
 Transform html to pug inside your Visual Studio Code, forget about using an external page anymore.
 
+<a href="./watch-this.gif"><img src="./watch-this.gif" width="600"></a>
+
 ## Features
 
-* Format selection.
-* Multiple selections support.
-* Keyboard shortcut: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>p</kbd> / <kbd>⌘ Command</kbd> + <kbd>Alt</kbd> + <kbd>p</kbd>
+- Format selection.
+- Multiple selections support.
+- Keyboard shortcut: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>p</kbd> / <kbd>⌘ Command</kbd> + <kbd>Alt</kbd> + <kbd>p</kbd>
 
-## Requirements
+## Installation
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Install this extension from the [VSCode
+Marketplace](https://marketplace.visualstudio.com/items?itemName=dimensi.vscode-xhtml2pug)
+
+## Usage
+
+1. Select the html.
+   - Hit <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>p</kbd> / <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>p</kbd>
+   - Run `xHTML2Pug: Convert Vue to Pug` or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>p</kbd> / <kbd>⌘ Command</kbd> + <kbd>Alt</kbd> + <kbd>p</kbd>.
+   - Run `xHTML2Pug: Convert HTML to Pug`.
+
+## Keyboard Shortcut
+
+Use the following to embed a shortcut in keybindings.json. Replace with your preferred key bindings.
+
+```json
+{
+  "key": "ctrl+alt+p",
+  "command": "vscode-xhtml2pug.transformVue2Pug"
+}
+```
+
+You can customize your shortcuts too under: File > Preferences > Keyboard Shortcuts. (Code > Preferences > Keyboard Shortcuts on macOS)
+Check [key bindings docs](https://code.visualstudio.com/docs/getstarted/keybindings).
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- `xhtml2pug.indent` (default: 'spaces'): Indent
+- `xhtml2pug.numberOfSpaces` (default: 2): Number of spaces for indents
+- `xhtml2pug.fragment` (default: true): Don't wrap into html > body
+- `xhtml2pug.commas` (default: false): Commas in attributes
+- `xhtml2pug.encode` (default: true): Encode html characters.
+- `xhtml2pug.doubleQuotes` (default: false): Use double quotes for attributes
+- `xhtml2pug.inlineCSS` (default: false): Place all classes in class attribute
+- `xhtml2pug.classesAtEnd` (default: false): Place all classes after attributes
