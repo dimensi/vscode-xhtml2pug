@@ -7,12 +7,23 @@
   "engines": {
     "vscode": "^1.63.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dimensi/vscode-xhtml2pug"
+  },
+  "author": {
+    "name": "Nikita Nafranets",
+    "email": "eddimensi@gmail.com",
+    "url": "https://dimensi.dev"
+  },
   "tags": [
     "vscode",
     "pug",
     "html2pug"
   ],
   "categories": [
+    "Programming Languages",
+    "Formatters",
     "Other"
   ],
   "activationEvents": [
@@ -45,7 +56,10 @@
         "xhtml2pug.indent": {
           "type": "string",
           "default": "spaces",
-          "enum": ["spaces", "tabs"],
+          "enum": [
+            "spaces",
+            "tabs"
+          ],
           "description": "Indent"
         },
         "xhtml2pug.numberOfSpaces": {
