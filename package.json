@@ -4,6 +4,7 @@
   "description": "Convert HTML, Vue, Angular to PUG",
   "version": "1.0.0",
   "icon": "./xhtml2pug-logo.png",
+  "publisher": "dimensi",
   "license": "MIT",
   "engines": {
     "vscode": "^1.63.0"
