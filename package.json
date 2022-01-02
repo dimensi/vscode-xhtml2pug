@@ -1,0 +1,113 @@
+{
+  "name": "vscode-xhtml2pug",
+  "displayName": "vscode-xhtml2pug",
+  "description": "Convert HTML, Vue, Angular to PUG",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "tags": [
+    "vscode",
+    "pug",
+    "html2pug"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-xhtml2pug.transformHTML2Pug",
+    "onCommand:vscode-xhtml2pug.transformVue2Pug"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-xhtml2pug.transformHTML2Pug",
+        "title": "xHTML2Pug: Convert HTML to Pug"
+      },
+      {
+        "command": "vscode-xhtml2pug.transformVue2Pug",
+        "title": "xHTML2Pug: Convert Vue, Angular to Pug"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-xhtml2pug.transformVue2Pug",
+        "key": "ctrl+alt+p",
+        "mac": "cmd+alt+p",
+        "linux": "ctrl+alt+p"
+      }
+    ],
+    "configuration": {
+      "title": "xHTML2Pug",
+      "properties": {
+        "xhtml2pug.indent": {
+          "type": "string",
+          "default": "spaces",
+          "enum": ["spaces", "tabs"],
+          "description": "Indent"
+        },
+        "xhtml2pug.numberOfSpaces": {
+          "type": "number",
+          "default": 2,
+          "description": "Number of spaces for indents"
+        },
+        "xhtml2pug.fragment": {
+          "type": "boolean",
+          "default": true,
+          "description": "Don't wrap into html > body"
+        },
+        "xhtml2pug.commas": {
+          "type": "boolean",
+          "default": false,
+          "description": "Commas in attributes"
+        },
+        "xhtml2pug.encode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Encode html characters."
+        },
+        "xhtml2pug.doubleQuotes": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use double quotes for attributes"
+        },
+        "xhtml2pug.inlineCSS": {
+          "type": "boolean",
+          "default": false,
+          "description": "Place all classes in class attribute"
+        },
+        "xhtml2pug.classesAtEnd": {
+          "type": "boolean",
+          "default": false,
+          "description": "Place all classes after attributes"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.63.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "@vscode/test-electron": "^1.6.2",
+    "eslint": "^8.1.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.3",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "xhtml2pug": "^3.0.0"
+  }
+}
