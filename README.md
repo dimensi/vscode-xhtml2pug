@@ -1,6 +1,7 @@
 # vscode-xhtml2pug README
 
-Transform html to pug inside your Visual Studio Code, forget about using an external page anymore.
+Transform html to pug inside your Visual Studio Code, forget about using an external page anymore.  
+Powered by [xhtml2pug](https://github.com/dimensi/xhtml2pug)
 
 <a href="./watch-this.gif"><img src="./watch-this.gif" width="600"></a>
 
